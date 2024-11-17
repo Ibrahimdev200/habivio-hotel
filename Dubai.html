@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dubai Listings - Habivio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header input {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .listings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .listing-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .listing-card-content {
+            padding: 15px;
+        }
+        .apartment-card:hover {
+            transform: scale(1.05);
+        }
+        .listing-card-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .listing-card-content p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgb(14, 36, 66);
+        }
+
+        .button {
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(14, 36, 66);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+     
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="img/habivio logo.png" alt="Habivio Logo">
+                </a>
+                <h1>Property Available in Dubai</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+             </div>   
+       
+        </header>
+    <section class="listings-container">
+        <!-- Listing 1 -->
+   
+   
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Waterfront Apartment">
+                <div class="listing-card-content">
+                    <h3>Luxury Waterfront Apartment</h3>
+                    <p>Hosted by Sarah - Dubai Marina</p>
+                    <p class="price">AED 1,700 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Stylish 2-Bedroom Apartment">
+                <div class="listing-card-content">
+                    <h3>Stylish 2-Bedroom Apartment</h3>
+                    <p>Hosted by John - Jumeirah Beach Residence</p>
+                    <p class="price">AED 1,200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Cozy Studio in Al Quoz">
+                <div class="listing-card-content">
+                    <h3>Cozy Studio in Al Quoz</h3>
+                    <p>Hosted by Emily - Al Quoz</p>
+                    <p class="price">AED 600 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Penthouse with Private Pool">
+                <div class="listing-card-content">
+                    <h3>Penthouse with Private Pool</h3>
+                    <p>Hosted by Mark - Downtown Dubai</p>
+                    <p class="price">AED 3,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Apartment in DIFC">
+                <div class="listing-card-content">
+                    <h3>Elegant Apartment in DIFC</h3>
+                    <p>Hosted by Anna - Dubai International Financial Centre</p>
+                    <p class="price">AED 1,400 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Sea View Apartment">
+                <div class="listing-card-content">
+                    <h3>Sea View Apartment</h3>
+                    <p>Hosted by Rachel - Jumeirah Beach</p>
+                    <p class="price">AED 1,600 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Loft in Dubai Marina">
+                <div class="listing-card-content">
+                    <h3>Modern Loft in Dubai Marina</h3>
+                    <p>Hosted by Liam - Dubai Marina</p>
+                    <p class="price">AED 1,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Villa">
+                <div class="listing-card-content">
+                    <h3>Beachfront Villa</h3>
+                    <p>Hosted by Zoe - Palm Jumeirah</p>
+                    <p class="price">AED 2,200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Chic Apartment in Business Bay">
+                <div class="listing-card-content">
+                    <h3>Chic Apartment in Business Bay</h3>
+                    <p>Hosted by Noah - Business Bay</p>
+                    <p class="price">AED 1,300 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment with Gym Access">
+                <div class="listing-card-content">
+                    <h3>Luxury Apartment with Gym Access</h3>
+                    <p>Hosted by Olivia - Jumeirah Lake Towers</p>
+                    <p class="price">AED 1,100 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Spacious Family Apartment">
+                <div class="listing-card-content">
+                    <h3>Spacious Family Apartment</h3>
+                    <p>Hosted by Aisha - Dubai Hills Estate</p>
+                    <p class="price">AED 1,800 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Contemporary Studio">
+                <div class="listing-card-content">
+                    <h3>Contemporary Studio</h3>
+                    <p>Hosted by Khalid - Al Barsha</p>
+                    <p class="price">AED 700 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment with Terrace">
+                <div class="listing-card-content">
+                    <h3>Luxury Apartment with Terrace</h3>
+                    <p>Hosted by Fatima - Dubai Marina</p>
+                    <p class="price">AED 1,500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Townhouse in Dubai Hills">
+                <div class="listing-card-content">
+                    <h3>Elegant Townhouse in Dubai Hills</h3>
+                    <p>Hosted by Sam - Dubai Hills Estate</p>
+                    <p class="price">AED 1,900 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Penthouse with City View">
+                <div class="listing-card-content">
+                    <h3>Penthouse with City View</h3>
+                    <p>Hosted by Sara - Downtown Dubai</p>
+                    <p class="price">AED 2,500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Apartment in Jumeirah">
+                <div class="listing-card-content">
+                    <h3>Charming Apartment in Jumeirah</h3>
+                    <p>Hosted by Ali - Jumeirah</p>
+                    <p class="price">AED 1,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa with Private Beach">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa with Private Beach</h3>
+                    <p>Hosted by Layla - Palm Jumeirah</p>
+                    <p class="price">AED 3,200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Stylish Studio in Al Ain">
+                <div class="listing-card-content">
+                    <h3>Stylish Studio in Al Ain</h3>
+                    <p>Hosted by Omar - Al Ain</p>
+                    <p class="price">AED 500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Apartment in Dubai Silicon Oasis">
+                <div class="listing-card-content">
+                    <h3>Modern Apartment in Dubai Silicon Oasis</h3>
+                    <p>Hosted by Samira - Dubai Silicon Oasis</p>
+                    <p class="price">AED 800 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxurious Apartment with Spa Access">
+                <div class="listing-card-content">
+                    <h3>Luxurious Apartment with Spa Access</h3>
+                    <p>Hosted by Yasmin - Jumeirah Beach</p>
+                    <p class="price">AED 1,600 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Contemporary Villa in Dubai Hills">
+                <div class="listing-card-content">
+                    <h3>Contemporary Villa in Dubai Hills</h3>
+                    <p>Hosted by Rami - Dubai Hills Estate</p>
+                    <p class="price">AED 2,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Apartment in Downtown">
+                <div class="listing-card-content">
+                    <h3>Elegant Apartment in Downtown</h3>
+                    <p>Hosted by Noor - Downtown Dubai</p>
+                    <p class="price">AED 1,300 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment with Balcony">
+                <div class="listing-card-content">
+                    <h3>Luxury Apartment with Balcony</h3>
+                    <p>Hosted by Zain - Dubai Marina</p>
+                    <p class="price">AED 1,100 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+
+                            <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Elegant Studio">
+                    <div class="listing-card-content">
+                        <h3>Elegant Studio</h3>
+                        <p>Hosted by Aisha - Dubai Marina</p>
+                        <p class="price">AED 750 / night</p>
+                        <a href="#" class="button">View Details</a>
+                      </div>    </div>
+   
+   
+       
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment with Pool">
+                    <div class="listing-card-content">
+                        <h3>Luxury Apartment with Pool</h3>
+                        <p>Hosted by Omar - Jumeirah Lake Towers</p>
+                        <p class="price">AED 1,300 / night</p>
+                        <a href="#" class="button">View Details</a>
+                      </div>    </div>
+   
+   
+       
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Chic Loft Apartment">
+                    <div class="listing-card-content">
+                        <h3>Chic Loft Apartment</h3>
+                        <p>Hosted by Fatima - Downtown Dubai</p>
+                        <p class="price">AED 950 / night</p>
+                        <a href="#" class="button">View Details</a>
+                      </div>    </div>
+   
+   
+       
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Penthouse with Sea View">
+                    <div class="listing-card-content">
+                        <h3>Penthouse with Sea View</h3>
+                        <p>Hosted by Khalid - Palm Jumeirah</p>
+                        <p class="price">AED 2,500 / night</p>
+                        <a href="#" class="button">View Details</a>
+                      </div>    </div>
+   
+   
+       
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Contemporary Beachfront Villa">
+                    <div class="listing-card-content">
+                        <h3>Contemporary Beachfront Villa</h3>
+                        <p>Hosted by Layla - Jumeirah Beach</p>
+                        <p class="price">AED 1,800 / night</p>
+                        <a href="#" class="button">View Details</a>
+                      </div>    </div>
+   
+   
+    </div>    </div>
+   
+    </section>
+</body>
+</html>

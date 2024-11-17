@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Asia Listings - Habivio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header input {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .listings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .listing-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .listing-card-content {
+            padding: 15px;
+        }
+        .apartment-card:hover {
+            transform: scale(1.05);
+        }
+        .listing-card-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .listing-card-content p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgb(14, 36, 66);
+        }
+
+        .button {
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(14, 36, 66);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+     
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="img/habivio logo.png" alt="Habivio Logo">
+                </a>
+                <h1>Property Available in Asia</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+             </div>   
+       
+        </header>
+    <section class="listings-container">
+        <!-- Listing 1 -->
+                  
+   
+   
+
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Villa in Bali">
+                <div class="listing-card-content">
+                    <h3>Beachfront Villa in Bali</h3>
+                    <p>Hosted by Ika - Bali</p>
+                    <p class="price">IDR 5,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Condo in Singapore">
+                <div class="listing-card-content">
+                    <h3>Modern Condo in Singapore</h3>
+                    <p>Hosted by Raj - Singapore</p>
+                    <p class="price">SGD 200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa in Phuket">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa in Phuket</h3>
+                    <p>Hosted by Somchai - Phuket</p>
+                    <p class="price">฿15,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Traditional Japanese House in Kyoto">
+                <div class="listing-card-content">
+                    <h3>Traditional Japanese House in Kyoto</h3>
+                    <p>Hosted by Haruto - Kyoto</p>
+                    <p class="price">JPY 20,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seaside Cottage in Sri Lanka">
+                <div class="listing-card-content">
+                    <h3>Seaside Cottage in Sri Lanka</h3>
+                    <p>Hosted by Nisa - Sri Lanka</p>
+                    <p class="price">LKR 10,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Resort in Maldives">
+                <div class="listing-card-content">
+                    <h3>Beachfront Resort in Maldives</h3>
+                    <p>Hosted by Ahmed - Maldives</p>
+                    <p class="price">MVR 30,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Penthouse in Hong Kong">
+                <div class="listing-card-content">
+                    <h3>Luxury Penthouse in Hong Kong</h3>
+                    <p>Hosted by Mei - Hong Kong</p>
+                    <p class="price">HKD 25,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Mountain Lodge in Nepal">
+                <div class="listing-card-content">
+                    <h3>Mountain Lodge in Nepal</h3>
+                    <p>Hosted by Ram - Nepal</p>
+                    <p class="price">NPR 6,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="City View Apartment in Kuala Lumpur">
+                <div class="listing-card-content">
+                    <h3>City View Apartment in Kuala Lumpur</h3>
+                    <p>Hosted by Amin - Kuala Lumpur</p>
+                    <p class="price">MYR 400 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Resort Villa in Bali">
+                <div class="listing-card-content">
+                    <h3>Resort Villa in Bali</h3>
+                    <p>Hosted by Wayan - Bali</p>
+                    <p class="price">IDR 7,500,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seaside Retreat in Goa">
+                <div class="listing-card-content">
+                    <h3>Seaside Retreat in Goa</h3>
+                    <p>Hosted by Anjali - Goa</p>
+                    <p class="price">INR 8,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Penthouse in Tokyo">
+                <div class="listing-card-content">
+                    <h3>Penthouse in Tokyo</h3>
+                    <p>Hosted by Yuki - Tokyo</p>
+                    <p class="price">JPY 35,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Private Villa in Bali">
+                <div class="listing-card-content">
+                    <h3>Private Villa in Bali</h3>
+                    <p>Hosted by Nyoman - Bali</p>
+                    <p class="price">IDR 10,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Riverside Villa in Vietnam">
+                <div class="listing-card-content">
+                    <h3>Riverside Villa in Vietnam</h3>
+                    <p>Hosted by Lan - Vietnam</p>
+                    <p class="price">VND 8,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Eco Lodge in Sri Lanka">
+                <div class="listing-card-content">
+                    <h3>Eco Lodge in Sri Lanka</h3>
+                    <p>Hosted by Saman - Sri Lanka</p>
+                    <p class="price">LKR 4,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Oceanfront Property in Maldives">
+                <div class="listing-card-content">
+                    <h3>Oceanfront Property in Maldives</h3>
+                    <p>Hosted by Ahmed - Maldives</p>
+                    <p class="price">MVR 45,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Penthouse in Seoul">
+                <div class="listing-card-content">
+                    <h3>Luxury Penthouse in Seoul</h3>
+                    <p>Hosted by Hana - Seoul</p>
+                    <p class="price">KRW 50,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Mountain Resort in Bhutan">
+                <div class="listing-card-content">
+                    <h3>Mountain Resort in Bhutan</h3>
+                    <p>Hosted by Dorji - Bhutan</p>
+                    <p class="price">BTN 10,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="City View Apartment in Jakarta">
+                <div class="listing-card-content">
+                    <h3>City View Apartment in Jakarta</h3>
+                    <p>Hosted by Dwi - Jakarta</p>
+                    <p class="price">IDR 2,500,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa in Phuket">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa in Phuket</h3>
+                    <p>Hosted by Somchai - Phuket</p>
+                    <p class="price">฿18,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Scenic Villa in Nepal">
+                <div class="listing-card-content">
+                    <h3>Scenic Villa in Nepal</h3>
+                    <p>Hosted by Gopal - Nepal</p>
+                    <p class="price">NPR 5,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Villa in Langkawi">
+                <div class="listing-card-content">
+                    <h3>Beachfront Villa in Langkawi</h3>
+                    <p>Hosted by Zain - Langkawi</p>
+                    <p class="price">MYR 1,200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Resort in Cambodia">
+                <div class="listing-card-content">
+                    <h3>Luxury Resort in Cambodia</h3>
+                    <p>Hosted by Dara - Cambodia</p>
+                    <p class="price">USD 200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Skyline Apartment in Bangkok">
+                <div class="listing-card-content">
+                    <h3>Skyline Apartment in Bangkok</h3>
+                    <p>Hosted by Natcha - Bangkok</p>
+                    <p class="price">THB 3,500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seafront Property in Sri Lanka">
+                <div class="listing-card-content">
+                    <h3>Seafront Property in Sri Lanka</h3>
+                    <p>Hosted by Kumar - Sri Lanka</p>
+                    <p class="price">LKR 15,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Cottage in Vietnam">
+                <div class="listing-card-content">
+                    <h3>Charming Cottage in Vietnam</h3>
+                    <p>Hosted by Minh - Vietnam</p>
+                    <p class="price">VND 5,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Mountain Retreat in Nepal">
+                <div class="listing-card-content">
+                    <h3>Mountain Retreat in Nepal</h3>
+                    <p>Hosted by Ramesh - Nepal</p>
+                    <p class="price">NPR 7,500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa in Koh Samui">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa in Koh Samui</h3>
+                    <p>Hosted by Pim - Koh Samui</p>
+                    <p class="price">THB 12,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Penthouse in Kuala Lumpur">
+                <div class="listing-card-content">
+                    <h3>Penthouse in Kuala Lumpur</h3>
+                    <p>Hosted by Nur - Kuala Lumpur</p>
+                    <p class="price">MYR 1,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Resort in Maldives">
+                <div class="listing-card-content">
+                    <h3>Beachfront Resort in Maldives</h3>
+                    <p>Hosted by Azim - Maldives</p>
+                    <p class="price">MVR 50,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Desert Villa in Dubai">
+                <div class="listing-card-content">
+                    <h3>Desert Villa in Dubai</h3>
+                    <p>Hosted by Ahmed - Dubai</p>
+                    <p class="price">AED 1,200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="City View Apartment in Jakarta">
+                <div class="listing-card-content">
+                    <h3>City View Apartment in Jakarta</h3>
+                    <p>Hosted by Dita - Jakarta</p>
+                    <p class="price">IDR 3,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Eco Lodge in Bhutan">
+                <div class="listing-card-content">
+                    <h3>Eco Lodge in Bhutan</h3>
+                    <p>Hosted by Tenzin - Bhutan</p>
+                    <p class="price">BTN 12,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Waterfront House in Philippines">
+                <div class="listing-card-content">
+                    <h3>Waterfront House in Philippines</h3>
+                    <p>Hosted by Lina - Philippines</p>
+                    <p class="price">PHP 8,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Urban Loft in Shanghai">
+                <div class="listing-card-content">
+                    <h3>Urban Loft in Shanghai</h3>
+                    <p>Hosted by Chen - Shanghai</p>
+                    <p class="price">CNY 1,500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Private Bungalow in Bali">
+                <div class="listing-card-content">
+                    <h3>Private Bungalow in Bali</h3>
+                    <p>Hosted by Gede - Bali</p>
+                    <p class="price">IDR 8,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Skyline Penthouse in Seoul">
+                <div class="listing-card-content">
+                    <h3>Skyline Penthouse in Seoul</h3>
+                    <p>Hosted by Jiho - Seoul</p>
+                    <p class="price">KRW 1,500,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Hotel in Hong Kong">
+                <div class="listing-card-content">
+                    <h3>Luxury Hotel in Hong Kong</h3>
+                    <p>Hosted by Mei - Hong Kong</p>
+                    <p class="price">HKD 2,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Lakefront Property in Thailand">
+                <div class="listing-card-content">
+                    <h3>Lakefront Property in Thailand</h3>
+                    <p>Hosted by Anong - Thailand</p>
+                    <p class="price">THB 5,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beach House in Indonesia">
+                <div class="listing-card-content">
+                    <h3>Beach House in Indonesia</h3>
+                    <p>Hosted by Budi - Indonesia</p>
+                    <p class="price">IDR 4,000,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Historical Villa in India">
+                <div class="listing-card-content">
+                    <h3>Historical Villa in India</h3>
+                    <p>Hosted by Priya - India</p>
+                    <p class="price">INR 15,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Garden Villa in Sri Lanka">
+                <div class="listing-card-content">
+                    <h3>Garden Villa in Sri Lanka</h3>
+                    <p>Hosted by Roshan - Sri Lanka</p>
+                    <p class="price">LKR 18,000 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+             </div>    </div>
+   
+   
+            
+        
+            
+            <!-- Add 19 more apartment cards here -->
+         </div>    </div>
+   
+   
+    </section>
+</body>
+</html>

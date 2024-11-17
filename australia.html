@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Australia Listings - Habivio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header input {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .listings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .listing-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .listing-card-content {
+            padding: 15px;
+        }
+        .apartment-card:hover {
+            transform: scale(1.05);
+        }
+        .listing-card-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .listing-card-content p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgb(14, 36, 66);
+        }
+
+        .button {
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(14, 36, 66);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+     
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="img/habivio logo.png" alt="Habivio Logo">
+                </a>
+                <h1>Property Available in Australia</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+             </div>   
+       
+        </header>
+  
+   <section class="listings-container">
+        <!-- Listing 1 -->
+                   <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Beachfront Apartment">
+                <div class="listing-card-content">
+                    <h3>Beachfront Apartment</h3>
+                    <p>Hosted by Sarah - Gold Coast, Queensland</p>
+                    <p class="price">$400 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="City Center Loft">
+                <div class="listing-card-content">
+                    <h3>City Center Loft</h3>
+                    <p>Hosted by John - Sydney, New South Wales</p>
+                    <p class="price">$350 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Countryside Retreat">
+                <div class="listing-card-content">
+                    <h3>Countryside Retreat</h3>
+                    <p>Hosted by Emily - Byron Bay, New South Wales</p>
+                    <p class="price">$250 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Penthouse">
+                <div class="listing-card-content">
+                    <h3>Luxury Penthouse</h3>
+                    <p>Hosted by Mark - Melbourne, Victoria</p>
+                    <p class="price">$600 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Cottage">
+                <div class="listing-card-content">
+                    <h3>Charming Cottage</h3>
+                    <p>Hosted by Anna - Adelaide, South Australia</p>
+                    <p class="price">$180 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Apartment">
+                <div class="listing-card-content">
+                    <h3>Modern Apartment</h3>
+                    <p>Hosted by Rachel - Brisbane, Queensland</p>
+                    <p class="price">$300 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Ski Lodge">
+                <div class="listing-card-content">
+                    <h3>Ski Lodge</h3>
+                    <p>Hosted by Kevin - Thredbo, New South Wales</p>
+                    <p class="price">$400 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Riverside Apartment">
+                <div class="listing-card-content">
+                    <h3>Riverside Apartment</h3>
+                    <p>Hosted by Tom - Hobart, Tasmania</p>
+                    <p class="price">$220 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa</h3>
+                    <p>Hosted by Olivia - Cairns, Queensland</p>
+                    <p class="price">$500 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Urban Studio">
+                <div class="listing-card-content">
+                    <h3>Urban Studio</h3>
+                    <p>Hosted by Leo - Perth, Western Australia</p>
+                    <p class="price">$270 / night</p>
+                    <a href="#" class="button">View Details</a>
+                 </div>    </div>
+   
+   
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Seaside Cottage">
+                    <div class="listing-card-content">
+                        <h3>Seaside Cottage</h3>
+                        <p>Hosted by Mia - Margaret River, Western Australia</p>
+                        <p class="price">$280 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Bushland Retreat">
+                    <div class="listing-card-content">
+                        <h3>Bushland Retreat</h3>
+                        <p>Hosted by Jack - Noosa, Queensland</p>
+                        <p class="price">$230 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="City View Apartment">
+                    <div class="listing-card-content">
+                        <h3>City View Apartment</h3>
+                        <p>Hosted by Zoe - Melbourne, Victoria</p>
+                        <p class="price">$360 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Luxury Waterfront Home">
+                    <div class="listing-card-content">
+                        <h3>Luxury Waterfront Home</h3>
+                        <p>Hosted by Samuel - Sydney, New South Wales</p>
+                        <p class="price">$700 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Heritage Apartment">
+                    <div class="listing-card-content">
+                        <h3>Heritage Apartment</h3>
+                        <p>Hosted by Ella - Brisbane, Queensland</p>
+                        <p class="price">$290 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Cozy Studio">
+                    <div class="listing-card-content">
+                        <h3>Cozy Studio</h3>
+                        <p>Hosted by Liam - Adelaide, South Australia</p>
+                        <p class="price">$150 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Modern Townhouse">
+                    <div class="listing-card-content">
+                        <h3>Modern Townhouse</h3>
+                        <p>Hosted by Ava - Canberra, Australian Capital Territory</p>
+                        <p class="price">$320 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Ocean View Apartment">
+                    <div class="listing-card-content">
+                        <h3>Ocean View Apartment</h3>
+                        <p>Hosted by Noah - Cairns, Queensland</p>
+                        <p class="price">$450 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Desert Oasis">
+                    <div class="listing-card-content">
+                        <h3>Desert Oasis</h3>
+                        <p>Hosted by Olivia - Alice Springs, Northern Territory</p>
+                        <p class="price">$200 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Luxury Farmstay">
+                    <div class="listing-card-content">
+                        <h3>Luxury Farmstay</h3>
+                        <p>Hosted by Ethan - Hunter Valley, New South Wales</p>
+                        <p class="price">$500 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Coastal Retreat">
+                    <div class="listing-card-content">
+                        <h3>Coastal Retreat</h3>
+                        <p>Hosted by Mia - Byron Bay, New South Wales</p>
+                        <p class="price">$350 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment">
+                    <div class="listing-card-content">
+                        <h3>Luxury Apartment</h3>
+                        <p>Hosted by Jack - Sydney, New South Wales</p>
+                        <p class="price">$500 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Rural Getaway">
+                    <div class="listing-card-content">
+                        <h3>Rural Getaway</h3>
+                        <p>Hosted by Emily - Tasmania</p>
+                        <p class="price">$220 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Penthouse with View">
+                    <div class="listing-card-content">
+                        <h3>Penthouse with View</h3>
+                        <p>Hosted by Samuel - Melbourne, Victoria</p>
+                        <p class="price">$600 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Charming Farmhouse">
+                    <div class="listing-card-content">
+                        <h3>Charming Farmhouse</h3>
+                        <p>Hosted by Ava - Yarra Valley, Victoria</p>
+                        <p class="price">$280 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Outback Cabin">
+                    <div class="listing-card-content">
+                        <h3>Outback Cabin</h3>
+                        <p>Hosted by Liam - Alice Springs, Northern Territory</p>
+                        <p class="price">$250 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Stylish Loft">
+                    <div class="listing-card-content">
+                        <h3>Stylish Loft</h3>
+                        <p>Hosted by Zoe - Brisbane, Queensland</p>
+                        <p class="price">$320 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Tranquil Hideaway">
+                    <div class="listing-card-content">
+                        <h3>Tranquil Hideaway</h3>
+                        <p>Hosted by Noah - Margaret River, Western Australia</p>
+                        <p class="price">$350 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="City Escape">
+                    <div class="listing-card-content">
+                        <h3>City Escape</h3>
+                        <p>Hosted by Olivia - Perth, Western Australia</p>
+                        <p class="price">$290 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+   
+                
+                           <div class="apartment-card">
+
+   
+                    <img src="https://via.placeholder.com/300x180" alt="Luxury Beach House">
+                    <div class="listing-card-content">
+                        <h3>Luxury Beach House</h3>
+                        <p>Hosted by Ethan - Noosa, Queensland</p>
+                        <p class="price">$650 / night</p>
+                        <a href="#" class="button">View Details</a>
+                     </div>    </div>
+   
+   
+            <!-- Repeat for 19 more apartments -->
+         </div>    </div>
+   
+   
+    </section>
+    <script>
+        console.log("Welcome to the Australia Apartments page!");
+    </script>
+</body>
+</html>

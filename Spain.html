@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Spain Listings - Habivio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header input {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .listings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .listing-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .listing-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .listing-card-content {
+            padding: 15px;
+        }
+        .apartment-card:hover {
+            transform: scale(1.05);
+        }
+        .listing-card-content h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .listing-card-content p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: rgb(14, 36, 66);
+        }
+
+        .button {
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(14, 36, 66);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+     
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="img/habivio logo.png" alt="Habivio Logo">
+                </a>
+                <h1>Property Available in Spain</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+             </div>   
+       
+        </header>
+    <section class="listings-container">
+        <!-- Listing 1 -->
+                   <div class="apartment-card">
+            <!-- Repeat this card for 20 apartments -->
+            <div class="apartment-card">
+                <img src="img/apartment6.jpg" alt="Apartment 1">
+                <h3>Luxury Apartment in Barcelona</h3>
+                <p>789 La Rambla, Barcelona, 08002</p>
+                <p>From €150 Per Night</p>
+                <a href="#">MORE INFO</a>
+             </div>    </div>
+   
+   
+
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Studio in Barcelona">
+                <div class="listing-card-content">
+                    <h3>Charming Studio in Barcelona</h3>
+                    <p>Hosted by Maria - Barcelona</p>
+                    <p class="price">€100 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment in Madrid">
+                <div class="listing-card-content">
+                    <h3>Luxury Apartment in Madrid</h3>
+                    <p>Hosted by Javier - Madrid</p>
+                    <p class="price">€200 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Cozy Cottage in Andalusia">
+                <div class="listing-card-content">
+                    <h3>Cozy Cottage in Andalusia</h3>
+                    <p>Hosted by Lucia - Andalusia</p>
+                    <p class="price">€120 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Loft in Valencia">
+                <div class="listing-card-content">
+                    <h3>Modern Loft in Valencia</h3>
+                    <p>Hosted by Carlos - Valencia</p>
+                    <p class="price">€150 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Flat in Seville">
+                <div class="listing-card-content">
+                    <h3>Elegant Flat in Seville</h3>
+                    <p>Hosted by Ana - Seville</p>
+                    <p class="price">€130 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Chic Apartment in Bilbao">
+                <div class="listing-card-content">
+                    <h3>Chic Apartment in Bilbao</h3>
+                    <p>Hosted by Pablo - Bilbao</p>
+                    <p class="price">€110 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Rustic House in Mallorca">
+                <div class="listing-card-content">
+                    <h3>Rustic House in Mallorca</h3>
+                    <p>Hosted by Isabel - Mallorca</p>
+                    <p class="price">€180 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Stylish Studio in Granada">
+                <div class="listing-card-content">
+                    <h3>Stylish Studio in Granada</h3>
+                    <p>Hosted by Miguel - Granada</p>
+                    <p class="price">€90 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seaside Apartment in Malaga">
+                <div class="listing-card-content">
+                    <h3>Seaside Apartment in Malaga</h3>
+                    <p>Hosted by Sofia - Malaga</p>
+                    <p class="price">€160 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Historic Flat in Toledo">
+                <div class="listing-card-content">
+                    <h3>Historic Flat in Toledo</h3>
+                    <p>Hosted by Elena - Toledo</p>
+                    <p class="price">€140 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Villa in Ibiza">
+                <div class="listing-card-content">
+                    <h3>Luxury Villa in Ibiza</h3>
+                    <p>Hosted by Mateo - Ibiza</p>
+                    <p class="price">€400 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Apartment in Salamanca">
+                <div class="listing-card-content">
+                    <h3>Charming Apartment in Salamanca</h3>
+                    <p>Hosted by Paula - Salamanca</p>
+                    <p class="price">€110 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Studio in San Sebastián">
+                <div class="listing-card-content">
+                    <h3>Elegant Studio in San Sebastián</h3>
+                    <p>Hosted by Ines - San Sebastián</p>
+                    <p class="price">€150 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Apartment in Alicante">
+                <div class="listing-card-content">
+                    <h3>Modern Apartment in Alicante</h3>
+                    <p>Hosted by Jorge - Alicante</p>
+                    <p class="price">€130 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Stylish Loft in Valencia">
+                <div class="listing-card-content">
+                    <h3>Stylish Loft in Valencia</h3>
+                    <p>Hosted by Laura - Valencia</p>
+                    <p class="price">€170 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seaside Villa in Marbella">
+                <div class="listing-card-content">
+                    <h3>Seaside Villa in Marbella</h3>
+                    <p>Hosted by Antonio - Marbella</p>
+                    <p class="price">€350 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Apartment in Barcelona">
+                <div class="listing-card-content">
+                    <h3>Luxury Apartment in Barcelona</h3>
+                    <p>Hosted by Teresa - Barcelona</p>
+                    <p class="price">€250 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Charming Cottage in Galicia">
+                <div class="listing-card-content">
+                    <h3>Charming Cottage in Galicia</h3>
+                    <p>Hosted by Clara - Galicia</p>
+                    <p class="price">€120 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Modern Studio in Madrid">
+                <div class="listing-card-content">
+                    <h3>Modern Studio in Madrid</h3>
+                    <p>Hosted by Sergio - Madrid</p>
+                    <p class="price">€140 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Elegant Apartment in Córdoba">
+                <div class="listing-card-content">
+                    <h3>Elegant Apartment in Córdoba</h3>
+                    <p>Hosted by Beatriz - Córdoba</p>
+                    <p class="price">€130 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Stylish Apartment in Zaragoza">
+                <div class="listing-card-content">
+                    <h3>Stylish Apartment in Zaragoza</h3>
+                    <p>Hosted by Francisco - Zaragoza</p>
+                    <p class="price">€115 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Luxury Flat in Málaga">
+                <div class="listing-card-content">
+                    <h3>Luxury Flat in Málaga</h3>
+                    <p>Hosted by Marta - Málaga</p>
+                    <p class="price">€210 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Chic Studio in Toledo">
+                <div class="listing-card-content">
+                    <h3>Chic Studio in Toledo</h3>
+                    <p>Hosted by David - Toledo</p>
+                    <p class="price">€95 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            
+                       <div class="apartment-card">
+
+   
+                <img src="https://via.placeholder.com/300x180" alt="Seaside Apartment in Valencia">
+                <div class="listing-card-content">
+                    <h3>Seaside Apartment in Valencia</h3>
+                    <p>Hosted by Noelia - Valencia</p>
+                    <p class="price">€160 / night</p>
+                    <a href="#" class="button">View Details</a>
+                  </div>    </div>
+   
+   
+   
+            <!-- Add 19 more apartment cards here -->
+         </div>    </div>
+   
+   
+    </section>
+</body>
+</html>

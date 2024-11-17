@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habivio - Book Your Stay</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToCountry(country) {
+            if (country === 'other') {
+                window.location.href = 'request_form.html'; // Redirect to the request form
+            } else if (country) {
+                window.location.href = country; // Redirect to the selected country page
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="img/habivio logo.png" alt="Habivio Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Referral Rewards</a></li>
+                    <li><a href="#">Covid-19 Safe</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+         </div>    </div>
+   
+   
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h2 class="hero-heading">Book My Luxury Stay</h2>
+            <form class="search-box">
+                  
+   
+   
+                <div class="form-group">
+                    <label for="check-in" class="special-2">Check-In Date</label>
+                    <input type="date" id="check-in" class="special">
+                 </div>    
+   
+   
+                <div class="form-group">
+                    <label for="check-out" class="special-2">Check-Out Date</label>
+                    <input type="date" id="check-out" class="special">
+                 </div>    
+   
+   <div class="form-group">
+                    <label for="destination" class="special-2">Destination</label>
+                    <select id="destination" onchange="redirectToCountry(this.value)">
+                        <option value="">Select a country</option>
+                        <option value="usa.html" class="special">USA</option>
+                        <option value="australia.html" class="special">Australia</option>
+                        <option value="uk.html" class="special">UK</option>
+                        <option value="france.html" class="special">France</option>
+                        <option value="dubai.html" class="special">Dubai</option>
+                        <option value="spain.html" class="special">Spain</option>
+                        <option value="thailand.html" class="special">Thailand</option>
+                        <option value="asia.html" class="special">Asia</option>
+                        <option value="other" class="special">Other</option>
+                    </select>
+                 </div>  
+                <button type="submit">Search</button>
+            </form>
+         </div>   
+   
+   
+    </section>
+  
+    <section class="special-deals-section">
+        <h2>FEATURED SPECIALS</h2>
+        <p class="special-text">Luxury, Location, and Convenience. Experience the Global Luxury Suites Lifestyle.<br>FURNISHED APARTMENTS FOR ALL YOUR TRAVEL NEEDS.</p>
+
+        <div class="deal-cards-container">
+            <!-- Repeatable Deal Card -->
+            <div class="deal-card">
+                <img src="img/image-1.jpg" alt="Suite 1" class="deal-card-image">
+                <h3>Global Luxury Suites at Capitol Hill</h3>
+                <p class="deal-location">1005 First Street NE, Washington, DC 20002</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-dumbbell"></i>
+                    <i class="fas fa-parking"></i>
+                    <i class="fas fa-swimming-pool"></i>
+                    <i class="fas fa-paw"></i>
+                </div>
+                <p class="deal-price">From $139 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+
+            <!-- Add more deal cards as needed -->
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+            <div class="deal-card">
+                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
+                <h3>Global Luxury Suites at The Variety</h3>
+                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
+                <div class="deal-icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-swimmer"></i>
+                    <i class="fas fa-spa"></i>
+                    <i class="fas fa-paw"></i>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <p class="deal-price">From $199 Per Night</p>
+                <a href="#" class="btn-view-more">MORE INFO</a>
+            </div>
+        </div>
+    </section>
+   
+   
+    </section>
+    <!-- Services & Amenities Section -->
+    <section class="services-amenities">
+        <div class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li><i class="fas fa-headset"></i> 24/7 Customer Support</li>
+                <li><i class="fas fa-calendar-alt"></i> Flexible Lease Terms</li>
+                <li><i class="fas fa-concierge-bell"></i> Concierge Services</li>
+            </ul>
+         </div>    </div>
+   
+   
+        <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+                <li><i class="fas fa-wifi"></i> Wi-Fi Access</li>
+                <li><i class="fas fa-couch"></i> Quality Furnishings</li>
+                <li><i class="fas fa-broom"></i> Cleaning Services</li>
+            </ul>
+         </div>    </div>
+   
+   
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Referral Rewards</a>
+            <a href="#">Corporate Services</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+         </div>    </div>
+   
+   
+        <div class="footer-bottom">
+            <form class="newsletter">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="legal">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Accessibility</a>
+             </div>    </div>
+   
+   
+            <p>© 2024 All rights reserved.</p>
+         </div>    </div>
+   
+   
+    </footer>
+    <!-- JavaScript for Random Hero Image -->
+    <script src="script.js"></script>
+</body>
+</html>
