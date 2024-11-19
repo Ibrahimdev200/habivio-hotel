@@ -12,7 +12,23 @@
             padding: 0;
             background-color: #f4f4f9;
         }
-
+        /* Notification message */
+        .notification {
+            display: none; /* Hidden by default */
+            background-color: #28a745; /* Green color */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            position: fixed; /* Fixed position */
+            top: 0; /* At the top */
+            left: 50%; /* Centered */
+            transform: translateX(-50%); /* Adjust for centering */
+            width: 90%; /* Width of the notification */
+            z-index: 1000; /* Sit on top */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+        }
         /* Menu bar */
         .navbar {
             display: flex;
@@ -36,14 +52,12 @@
         .navbar a:hover {
             text-decoration: underline;
         }
-
         /* Main content */
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
         }
-
         /* Apartment listing grid */
         .apartment-listings {
             display: flex;
@@ -91,7 +105,6 @@
         .apartment-listing a:hover {
             background-color: #218838;
         }
-
         /* Apartment details */
         .details, .image-gallery, .booking {
             max-width: 600px;
@@ -116,7 +129,6 @@
         .book-button:hover {
             background-color: #0056b3;
         }
-
         /* Image gallery */
         .gallery-thumbnails {
             display: flex;
@@ -135,10 +147,66 @@
         .gallery-thumbnails img:hover {
             border-color: #007bff;
         }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Form styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
     </style>
 </head>
 <body>
-
+    <div class="notification" id="notification">
+        Thank you for your reservation! We will contact you within 24 hours.
+    </div>
     <header class="main-header">
         <div class="header-content">
             <a href="#" class="logo">
@@ -153,11 +221,24 @@
                 </ul>
             </nav>
          </div>   
-   
     </header>
-
     <div class="container" id="content">
         <!-- Content will be rendered here by JavaScript -->
+    </div>
+
+    <!-- Modal for Reservation Form -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reserve Your Apartment</h2>
+            <form id="reservation-form">
+                <input type="text" id="full-name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="date" id="reservation-date" required>
+                <button type="submit" class="book-button">Send</button>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -176,98 +257,7 @@
                     "https://via.placeholder.com/100?text=Image+3"
                 ]
             },
-            2: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            3: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            4: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            5: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            6: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            7: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-            8: {
-                title: "Cozy Apartment in Istanbul",
-                location: "Istanbul, Turkey",
-                host: "Hosted by Ayşegül",
-                details: "2 guests · 1 bedroom · 1 bed · 1 private bathroom",
-                price: "€60 per night",
-                mainImage: "https://via.placeholder.com/400?text=Istanbul+Apartment",
-                thumbnails: [
-                    "https://via.placeholder.com/100?text=Image+1",
-                    "https://via.placeholder.com/100?text=Image+2",
-                    "https://via.placeholder.com/100?text=Image+3"
-                ]
-            },
-           
+            // Additional apartments...
         };
 
         // Get the apartment ID from the URL
@@ -278,7 +268,6 @@
         // Render content based on whether an apartment ID is provided
         if (apartmentId && apartments[apartmentId]) {
             const apartment = apartments[apartmentId];
-
             contentDiv.innerHTML = `
                 <div class="details">
                     <h1>${apartment.title}</h1>
@@ -295,8 +284,7 @@
                 </div>
                 <div class="booking">
                     <h3>Check Availability</h3>
-                    <input type="date">
-                    <button class="book-button">Reserve</button>
+                    <button class="book-button" id="openModal">Reserve</button>
                 </div>
             `;
 
@@ -306,6 +294,51 @@
                 thumbnail.addEventListener('click', (e) => {
                     document.getElementById('main-image').src = e.target.src;
                 });
+            });
+
+            // Modal handling
+            const modal = document.getElementById("reservationModal");
+            const btn = document.getElementById("openModal");
+            const span = document.getElementsByClassName("close")[0];
+            const notification = document.getElementById("notification");
+
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Form submission handling
+            const reservationForm = document.getElementById('reservation-form');
+            reservationForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Gather form data
+                const fullName = document.getElementById('full-name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const reservationDate = document.getElementById('reservation-date').value;
+
+                // Here you would handle the form submission to your backend
+                // For this example, we'll just show the notification
+                modal.style.display = "none"; // Close the modal
+                notification.style.display = "block"; // Show success notification
+
+                // Hide notification after 5 seconds
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 5000);
+
+                // Optionally reset the form
+                reservationForm.reset();
             });
         } else {
             // Display apartment listings
@@ -324,7 +357,5 @@
             `;
         }
     </script>
-
-    
 </body>
 </html>
