@@ -11,6 +11,122 @@
 
     
 <style>
+
+
+      
+        
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                background-color: rgb(14, 36, 66);
+                position: absolute; 
+                height: 15rem;
+                top: 60px; 
+                left: 0;
+                right: 0; /* Added for full width on toggle */
+                z-index: 10;
+            }
+            
+            .nav-links.active {
+                display: flex; 
+            }
+
+            .menu-toggle {
+                display: block; 
+            }
+        }
+
+        /* Close Button */
+        .close-btn {
+            font-size: 24px; 
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+            align-self: flex-end; 
+            margin: 10px; 
+        }
+         /* Toggle Button */
+         .menu-toggle {
+            position: static;
+            display: none; /* Hide by default */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px; /* Icon size */
+            cursor: pointer;
+        } 
+      
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hidden by default */
+                flex-direction: column; /* Stack items vertically */
+                background-color: #444; /* Background color for dropdown */
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                left: 0;
+                width: 100%; /* Full width on toggle */
+                z-index: 10;
+                transition: max-height 0.3s ease-out; /* Smooth transition */
+            }
+            
+            .nav-links.active {
+                display: flex; /* Show when active */
+            }
+
+            .menu-toggle {
+                display: block; /* Show toggle button on mobile */
+            }
+        }
+
+        /* Close Button for Mobile Menu */
+        .close-btn {
+            align-self: flex-end; /* Align close button in top right of menu */
+            margin: 10px;
+            color: white;
+            font-size: 24px; /* Size of close icon */
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
     /* Add animation for the logo when loading */
     .loading-logo {
         animation: spin 1s linear infinite;
@@ -85,6 +201,10 @@
             <a href="#" class="logo">
                 <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo">
             </a>
+              <!-- Menu Toggle Button -->
+              <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>

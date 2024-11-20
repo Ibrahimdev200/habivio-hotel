@@ -23,6 +23,23 @@ setRandomImage();
 
 
 // Placeholder for future enhancements
-console.log("Luxury Suites page loaded.");
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const closeBtn = document.getElementById('close-btn');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+});
+
+// Adding functionality to close the menu when clicking outside of it
+window.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
+});
 
 
