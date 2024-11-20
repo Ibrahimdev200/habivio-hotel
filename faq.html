@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Reservation FAQ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+        /* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(14, 36, 66);
+  margin-bottom: 20px;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background: rgb(14, 36, 66);
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgb(14, 36, 66);
+}
+
+.faq-icon {
+  width: 16px;
+  height: 16px;
+  background: url('down-arrow.svg') no-repeat center;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #f1f1f1;
+  padding: 0 15px;
+  border-left: 3px solid rgb(14, 36, 66);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 200px;
+  padding: 10px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .faq-container {
+    padding: 10px;
+  }
+  .faq-question {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .faq-answer p {
+    font-size: 0.9em;
+  }
+}
+
+    </style>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Accommodation Guidelines</a></li>
+                    <li><a href="guid.html">Special-Request</a></li>
+                </ul>
+            </nav>
+         </div>    </div>
+   
+   
+    </header>
+  <div class="faq-container">
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>1. Can I visit the property before booking?</span>
+        <i class="faq-icon"></i>
+      </button>
+      <div class="faq-answer">
+        <p>No, but it’s unnecessary. Our detailed listings include descriptions, photos, videos, and floor plans. Payments are securely held until you move in.</p>
+      </div>
+    </div>
+
+    <!-- Add more FAQ items -->
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>2. What is the cancellation policy?</span>
+        <i class="faq-icon"></i>
+      </button>
+      <div class="faq-answer">
+        <p>You can cancel anytime before moving in. Refund eligibility depends on the timing and the booking’s cancellation policy. Note that the Tenant Protection fee (10%) is non-refundable.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+<div class="faq-item">
+    <button class="faq-question">
+      <span>3. What happens after my booking is accepted?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+        You’ll need to pay the first month’s rent, a refundable bond, and, if applicable, the Tenant Protection fee.
+        Once payment is confirmed, your booking is secured, and you’ll receive the landlord’s contact details in the booking agreement. Future rental payments will be made directly to the landlord.
+      </p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 4 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>4. Is Habivio a rental agency?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>No, we’re an online platform connecting tenants with property owners.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 5 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>5. Are the properties furnished?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, all properties on Habivio are fully furnished and equipped for short-term stays.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 6 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>6. Can I bring pets to the property?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Many listings are pet-friendly, but policies vary. Check the property’s specific rules or inquire through the platform.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 7 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>7. How secure is my payment?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>All payments are processed securely and held safely until your move-in date.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 8 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>8. Are there discounts for longer stays?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, we offer discounts for bi-monthly and quarterly payment plans, automatically applied at booking.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 9 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>9. How do I check in?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Most properties use keyless entry with electronic locks. Access details will be emailed a few days before your stay.</p>
+    </div>
+  </div>
+  
+  <!-- FAQ Item 10 -->
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>10. What if there’s an issue with the property after I move in?</span>
+      <i class="faq-icon"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Report any issues within 7 days of check-in. We’ll work to resolve the problem or assist in facilitating a resolution with the property owner.
+        If the conflict cannot be resolved, you are entitled to a full refund of your deposit.
+      </p>
+    </div>
+  </div>
+  
+    <!-- Continue with the rest of the FAQs -->
+  </div>
+  <div class="footer-bottom">
+    <form class="newsletter">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <div class="legal">
+        <a href="faq.html">FAQ</a>
+        <a href="guid.html">Accommodation guidelines</a>
+     </div>    </div>
+
+
+    <p>© 2024 All rights reserved.</p>
+ </div>    </div>
+
+
+</footer>
+  <script src="scripts.js"></script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      // Close all other open answers
+      const active = document.querySelector('.faq-question.active');
+      if (active && active !== question) {
+        active.classList.remove('active');
+        active.nextElementSibling.style.maxHeight = null;
+      }
+
+      // Toggle the current answer
+      question.classList.toggle('active');
+      const answer = question.nextElementSibling;
+      if (question.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = null;
+      }
+    });
+  });
+});
+
+</script>
+</html>
