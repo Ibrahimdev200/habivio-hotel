@@ -38,30 +38,120 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             animation: slideDown 0.5s forwards;
         }
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: rgb(14, 36, 66);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .navbar h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #ff4757;
-        }
-        .navbar a {
-            color: whitesmoke;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        .navbar a:hover {
-            color: #ff4757;
-        }
+       /* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #004d4f;;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header {
+     /* Header background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+font-size: 20px;
+font-weight: bolder;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ff4757;
+}
+
+.navbar a {
+    color: whitesmoke;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+    display: none; /* Hide toggle button by default */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 24px; /* Increase icon size */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 250, 250, 0.534);
+}
+
+.nav-links li a:hover {
+    background-color: #a0d2eb;
+    border-radius: 5px;
+}
+.menu-toggle.active:after {
+    content: '✖'; /* Change to X */
+    font-size: 24px; /* Size of the X */
+    color: white; /* Color of the X */
+}
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+a:hover{
+    color: #dc3545;
+}
+
+/* Change color on hover */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar nav {
+        margin-top: 2rem;
+        height: 10rem;
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; 
+        justify-content: space-between;/* Stack links vertically */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        background-color: #004d4f; /* Background color for dropdown */
+        padding: 10px 0; /* Padding around the dropdown */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .navbar nav.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+        margin-left: auto; /* Push to the right */
+    }
+}
+
+/* Styles for the Menu Toggle */
+.menu-toggle.active i.fa-bars {
+    display: none; /* Hide hamburger icon when active */
+}
+
+.menu-toggle.active i.fa-times {
+    display: block; /* Show X icon when active */
+}
+
+.menu-toggle i.fa-times {
+    display: none; /* Hide X icon by default */
+}
         /* Main Content Styles */
         .container {
             max-width: 1200px;
@@ -375,7 +465,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             flex: 1 1 calc(25% - 20px); /* Ensures 4 listings per row */
-            max-width: calc(25% - 20px);
+            max-width: calc(25% - 10px);
             transition: transform 0.3s;
         }
         .apartment-listing:hover {
@@ -409,6 +499,58 @@
             background-color: #e8434c;
         }
 
+
+        /* Main Image Styles */
+#main-image {
+    width: 100%;
+    height: 70vh; /* Default height for larger screens */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+
+#reservation-form {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 20px; /* Padding for form */
+    background-color: rgba(249, 249, 249, 0.95); /* Slightly transparent background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #main-image {
+        height: 50vh; /* Reduce height for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #main-image {
+        height: 30vh; /* Further reduce height for mobile devices */
+    }
+
+    #reservation-form {
+        display: none; /* Initially hidden */
+        position: fixed; /* Fixed position */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        right: 0; /* Align to right */
+        bottom: 0; /* Align to bottom */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        padding: 20px; /* Padding for form */
+        background-color: rgba(249, 249, 249, 0.95); /* Slightly transparent background */
+        z-index: 1000; /* Ensure it appears above other elements */
+    }
+}
+
           /* Responsive Design */
           @media (max-width: 768px) {
             .apartment-listing {
@@ -428,6 +570,68 @@
     display: block;
 }
 
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .info-area {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .info-area > div {
+        min-width: auto; /* Remove minimum width */
+    }
+
+    #main-image {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .reserve-button {
+        width: 100%; /* Full width for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.25em; /* Adjust font size for smaller screens */
+    }
+
+    .comment {
+        font-size: 0.9em; /* Smaller font size for comments */
+    }
+
+    .success-message {
+        font-size: 0.9em; /* Adjust success message font size */
+    }
+}
+
+/* Style for the gallery thumbnails */
+.gallery-thumbnails img {
+    width: 100px; /* Set width for thumbnails */
+    height: auto; /* Keep aspect ratio */
+    cursor: pointer; /* Change cursor to pointer */
+    margin: 5px; /* Add margin for spacing */
+}
+
+/* Host image styling */
+#hostImage {
+    width: 50px; /* Set a fixed width for host image */
+    height: 50px; /* Set a fixed height for host image */
+    border-radius: 50%; /* Make it circular */
+}
+
+/* Modal Styles */
+#reservation-form {
+    max-width: 500px; /* Set max width for modal */
+    margin: 0 auto; /* Center modal */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
     </style>
 </head>
 <body>
@@ -438,10 +642,15 @@
         <a href="index.html">
             <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo" class="logo">
         </a>
+        <!-- Menu Toggle Button -->
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+            <i class="fas fa-times" style="display: none;"></i> <!-- X icon, hidden by default -->
+        </button>
         <nav>
             <a href="index.html">Home</a>
             <a href="contact.html">FAQ</a>
-            <a href="contact.html">Accommodation Guidelines</a>
+            <a href="contact.html">Guidelines</a>
             <a href="request_form.html">Special-Request</a>
         </nav>
     </header>
@@ -449,7 +658,7 @@
     <div class="container" id="content">
         <!-- Apartment Details Section -->
         <div class="details" id="apartmentDetails" style="display: none;">
-            <img id="main-image" src="img/image-4.jpg" alt="Main Image" style="width: 100%; border-radius: 10px; height: 70vh;">
+            <img id="main-image" src="img/image-4.jpg" alt="Main Image" style="width: 95%; border-radius: 10px; height: 55vh;">
             <h1 id="apartmentTitle"></h1>
             <p id="apartmentLocation"></p>
             
@@ -509,10 +718,8 @@
             </div>
             
         </div>
-
-         <!-- Persistent Modal for Reservation Form -->
+<!-- Persistent Modal for Reservation Form -->
 <button id="reservation-btn">Make Reservation</button>
-
 <div id="reservation-form" style="display: none;">
     <h3>Reservation Form</h3>
     <form action="https://getform.io/f/aollzrxb" method="POST">
@@ -545,20 +752,28 @@
     <button id="close-btn">Close</button>
 </div>
 
+
 <div class="success-message" id="success-message" style="display:none;">
     Thank you! We will contact you soon.
 </div>
 
 <script>
-    const reservationBtn = document.getElementById('reservation-btn');
-    const reservationForm = document.getElementById('reservation-form');
-    const closeBtn = document.getElementById('close-btn');
+ const reservationBtn = document.getElementById('reservation-btn');
+const reservationForm = document.getElementById('reservation-form');
+const closeBtn = document.getElementById('close-btn');
 
-    // Toggle form visibility
-    reservationBtn.addEventListener('click', () => {
-        reservationForm.style.display = 'block';
-        reservationBtn.style.display = 'none';
-    });
+// Toggle form visibility
+reservationBtn.addEventListener('click', () => {
+    reservationForm.style.display = 'block';
+    reservationBtn.style.display = 'none'; // Hide the button when form is shown
+});
+
+// Close the form
+closeBtn.addEventListener('click', () => {
+    reservationForm.style.display = 'none';
+    reservationBtn.style.display = 'inline-block'; // Show the button again
+});
+
 
     closeBtn.addEventListener('click', () => {
         reservationForm.style.display = 'none';
@@ -746,7 +961,7 @@
         } else {
             // Display apartment listings
             contentDiv.innerHTML = `
-                <h1>Available Apartments UK</h1>
+                
                 <div class="apartment-listings">
                     ${Object.keys(apartments).map(id => `
                         <div class="apartment-listing">
@@ -793,7 +1008,7 @@
         };
 
         contentDiv.innerHTML = `
-            <h1>Available Apartments</h1>
+            <h1 ">Available Apartments</h1>
             <div class="apartment-listings">
                 ${Object.keys(apartments).map(id => `
                     <div class="apartment-listing">
@@ -805,6 +1020,25 @@
                 `).join('')}
             </div>
         `;
+    </script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.navbar nav');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Toggle 'active' class for nav links
+            menuToggle.classList.toggle('active'); // Toggle active class for button
+
+        });
+
+  
+
+// Close the form
+closeBtn.addEventListener('click', () => {
+    reservationForm.style.display = 'none';
+    reservationBtn.style.display = 'inline-block'; // Show the button again
+});
+
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
     

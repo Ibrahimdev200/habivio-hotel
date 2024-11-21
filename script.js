@@ -29,6 +29,7 @@ const closeBtn = document.getElementById('close-btn');
 
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active'); 
 });
 
 closeBtn.addEventListener('click', () => {
@@ -41,5 +42,7 @@ window.addEventListener('click', (e) => {
         navLinks.classList.remove('active');
     }
 });
+
+
 
 

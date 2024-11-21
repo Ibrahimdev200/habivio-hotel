@@ -12,121 +12,102 @@
     
 <style>
 
+/* Header Styles */
+.main-header {
+    background-color: #004d4f; /* Header background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    font-size: 20px;
+    font-weight: bolder;
+}
 
-      
-        
-        .logo img {
-            height: 40px;
-        }
+.header-content {
+    display: flex; /* Use flexbox for header content */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
 
-        .nav-links {
-            display: flex;
-            list-style-type: none;
-            margin-left: 20px;
-        }
+/* Logo Styles */
+.logo img {
+    height: 80px; /* Adjust logo size */
+}
 
-        .nav-links li {
-            margin: 0 10px;
-        }
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            transition: background 0.3s;
-        }
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
 
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
 
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
+.nav-links a:hover {
+    color: #a0d2eb; /* Change color on hover */
+}
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none; 
-                flex-direction: column;
-                background-color: rgb(14, 36, 66);
-                position: absolute; 
-                height: 15rem;
-                top: 60px; 
-                left: 0;
-                right: 0; /* Added for full width on toggle */
-                z-index: 10;
-            }
-            
-            .nav-links.active {
-                display: flex; 
-            }
+/* Mobile Styles */
+.menu-toggle {
+    display: none; /* Hide toggle button by default */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 24px; /* Increase icon size */
+}
 
-            .menu-toggle {
-                display: block; 
-            }
-        }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        background-color: #004d4f; /* Background color for dropdown */
+        padding: 10px 0; /* Padding around the dropdown */
+        z-index: 1; /* Ensure it appears above other content */
+    }
 
-        /* Close Button */
-        .close-btn {
-            font-size: 24px; 
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-            align-self: flex-end; 
-            margin: 10px; 
-        }
-         /* Toggle Button */
-         .menu-toggle {
-            position: static;
-            display: none; /* Hide by default */
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px; /* Icon size */
-            cursor: pointer;
-        } 
-      
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Hidden by default */
-                flex-direction: column; /* Stack items vertically */
-                background-color: #444; /* Background color for dropdown */
-                position: absolute;
-                top: 60px; /* Adjust based on header height */
-                left: 0;
-                width: 100%; /* Full width on toggle */
-                z-index: 10;
-                transition: max-height 0.3s ease-out; /* Smooth transition */
-            }
-            
-            .nav-links.active {
-                display: flex; /* Show when active */
-            }
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+        margin-left: auto; /* Push to the right */
+    }
 
-            .menu-toggle {
-                display: block; /* Show toggle button on mobile */
-            }
-        }
+    .nav-links li {
+        margin: 10px 0; /* Space between links when stacked */
+    }
+}
 
-        /* Close Button for Mobile Menu */
-        .close-btn {
-            align-self: flex-end; /* Align close button in top right of menu */
-            margin: 10px;
-            color: white;
-            font-size: 24px; /* Size of close icon */
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
+/* Styles for the Menu Toggle */
+.menu-toggle.active i.fa-bars {
+    display: none; /* Hide hamburger icon when active */
+}
+
+.menu-toggle.active i.fa-times {
+    display: block; /* Show X icon when active */
+}
+
+.menu-toggle i.fa-times {
+    display: none; /* Hide X icon by default */
+}
     /* Add animation for the logo when loading */
     .loading-logo {
         animation: spin 1s linear infinite;
@@ -165,6 +146,8 @@
 </style>
 
 <script>
+
+    
     function performSearch() {
         const checkIn = document.getElementById("check-in").value;
         const checkOut = document.getElementById("check-out").value;
@@ -195,28 +178,27 @@
         <div class="loading-screen" id="loading-screen">
             <img src="img/habivio logo.png" alt="Loading...">
         </div>
-    <!-- Header Section -->
-    <header class="main-header">
-        <div class="header-content">
-            <a href="#" class="logo">
-                <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo">
-            </a>
-              <!-- Menu Toggle Button -->
-              <button class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Accommodation Guidelines</a></li>
-                    <li><a href="guid.html">Special-Request</a></li>
-                </ul>
-            </nav>
-         </div>    </div>
-   
-   
-    </header>
+        <!-- Header Section -->
+        <header class="main-header">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo">
+                </a>
+                <!-- Menu Toggle Button -->
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+                    <i class="fas fa-times" style="display: none;"></i> <!-- X icon, hidden by default -->
+                </button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Guidelines</a></li>
+                        <li><a href="guid.html">Special Request</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background"></div>
@@ -324,146 +306,7 @@
                 <p class="deal-price">From $199 Per Night</p>
                 <a href="#" class="btn-view-more">MORE INFO</a>
             </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
-            <div class="deal-card">
-                <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
-                <h3>Global Luxury Suites at The Variety</h3>
-                <p class="deal-location">1700 Alton Road, Miami, FL 33139</p>
-                <div class="deal-icons">
-                    <i class="fas fa-wifi"></i>
-                    <i class="fas fa-swimmer"></i>
-                    <i class="fas fa-spa"></i>
-                    <i class="fas fa-paw"></i>
-                    <i class="fas fa-parking"></i>
-                </div>
-                <p class="deal-price">From $199 Per Night</p>
-                <a href="#" class="btn-view-more">MORE INFO</a>
-            </div>
+          
             <div class="deal-card">
                 <img src="img/image-2.jpg" alt="Suite 2" class="deal-card-image">
                 <h3>Global Luxury Suites at The Variety</h3>
@@ -528,14 +371,14 @@
         </form>
         <div class="legal">
             <a href="faq.html">FAQ</a>
-            <a href="guid.html">Accommodation guidelines</a>
-         </div>    </div>
+            <a href="guid.html">Guidelines</a>
+         </div>    
 
 
         <p>© 2024 All rights reserved.</p>
-     </div>    </div>
+    
 
-
+</div>
 </footer>
     <!-- JavaScript for Random Hero Image -->
     <script src="script.js"></script>
