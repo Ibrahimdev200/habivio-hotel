@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Form - Habivio</title>
+    <title>Request Form - Habivio</title><link rel="stylesheet" href="styles.css">
     <style>
         /* Reset and Base Styles */
         *, *::before, *::after {
@@ -165,16 +165,20 @@
 <body>
     <header class="main-header">
         <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="img/habivio logo.png" alt="Habivio Logo">
+            <a href="#" class="logo">
+                <img src="img/habivio_logo-removebg-preview.png" alt="Habivio Logo">
             </a>
+            <!-- Menu Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+                <i class="fas fa-times" style="display: none;"></i> <!-- X icon, hidden by default -->
+            </button>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Referral Rewards</a></li>
-                    <li><a href="#">Covid-19 Safe</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Guidelines</a></li>
+                    <li><a href="request_form.html">Special Request</a></li>
                 </ul>
             </nav>
         </div>
@@ -432,4 +436,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
