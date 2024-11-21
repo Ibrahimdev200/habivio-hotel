@@ -27,35 +27,100 @@
         }
         /* Header Styles */
         .main-header {
-            background-color: rgb(14,36,66);
-            color: #ffffff;
-            padding: 1em 0;
-            box-shadow: 0 2px 4px rgb(255, 255, 255);
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo img {
-            width: 150px;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5em;
-        }
-        .nav-links li a {
-            color: #ffffff;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .nav-links li a:hover {
-            color: #ff6347;
-        }
+    background-color: #004d4f; /* Header background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.header-content {
+    display: flex; /* Use flexbox for header content */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
+
+/* Logo Styles */
+.logo img {
+    height: 80px; /* Adjust logo size */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #a0d2eb; /* Change color on hover */
+}
+
+/* Mobile Styles */
+.menu-toggle {
+    display: none; /* Hide toggle button by default */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 24px; /* Increase icon size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the header */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        background-color: #004d4f; /* Background color for dropdown */
+        padding: 10px 0; /* Padding around the dropdown */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+        margin-left: auto; /* Push to the right */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Space between links when stacked */
+    }
+}
+
+/* Styles for the Menu Toggle */
+.menu-toggle.active i.fa-bars {
+    display: none; /* Hide hamburger icon when active */
+}
+
+.menu-toggle.active i.fa-times {
+    display: block; /* Show X icon when active */
+}
+
+.menu-toggle i.fa-times {
+    display: none; /* Hide X icon by default */
+}
         /* Request Form Section */
         .request-form {
             padding: 3em 1em;
