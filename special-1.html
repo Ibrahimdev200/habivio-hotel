@@ -13,6 +13,8 @@
 <body>
 
     <style>
+
+        
         /* Global Styles */
         body {
             font-family: 'Montserrat', sans-serif;
@@ -509,7 +511,7 @@ a:hover{
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center adjustment */
-    width: 90%; /* Responsive width */
+    width: 50%; /* Responsive width */
     max-width: 500px; /* Max width */
     display: none; /* Hidden by default */
 }
@@ -659,6 +661,118 @@ button[type="submit"]:hover, #close-btn:hover {
 }
 
 
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .details, .info-area {
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .navbar nav {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .amenities {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .persistent-modal {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+
+    .reserve-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        align-self: flex-end;
+    }
+
+    .navbar nav {
+        display: none;
+        position: static;
+        width: 100%;
+    }
+
+    .navbar nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-area {
+        flex-direction: column;
+    }
+
+    .gallery-thumbnails img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .details {
+        padding: 10px;
+    }
+
+    .book-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .persistent-modal {
+        padding: 20px;
+    }
+}
     </style>
     <body>
   
@@ -760,6 +874,10 @@ button[type="submit"]:hover, #close-btn:hover {
                     <label for="date-to">Date To:</label>
                     <input type="date" id="date-to" name="date-to" required>
                 </div>
+                <div class="form-group">
+                        <label for="location">Your present location:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
                 <div class="form-group">
                     <label for="additional-info">Additional Information (if any):</label>
                     <textarea id="additional-info" name="additional-info" placeholder="Enter any extra details..."></textarea>

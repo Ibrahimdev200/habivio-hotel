@@ -509,7 +509,7 @@ a:hover{
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center adjustment */
-    width: 90%; /* Responsive width */
+    width: 50%; /* Responsive width */
     max-width: 500px; /* Max width */
     display: none; /* Hidden by default */
 }
@@ -736,7 +736,7 @@ button[type="submit"]:hover, #close-btn:hover {
             </div>
         </div>
         <!-- Persistent Modal for Reservation Form -->
-        <button id="reservation-btn">Make Reservation</button>
+          <button id="reservation-btn">Make Reservation</button>
         <div id="reservation-form" style="display: none;">
             <h3>Reservation Form</h3>
             <form action="https://getform.io/f/aollzrxb" method="POST">
@@ -760,6 +760,10 @@ button[type="submit"]:hover, #close-btn:hover {
                     <label for="date-to">Date To:</label>
                     <input type="date" id="date-to" name="date-to" required>
                 </div>
+                <div class="form-group">
+                        <label for="location">Your present location:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
                 <div class="form-group">
                     <label for="additional-info">Additional Information (if any):</label>
                     <textarea id="additional-info" name="additional-info" placeholder="Enter any extra details..."></textarea>
